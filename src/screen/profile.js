@@ -5,11 +5,23 @@ class Profile extends Component {
     _onPress = () => {
         this.props.navigation.navigate("Home")
     }
+    _setparam = () => {
+        this.props.navigation.setParams({
+            nombre: "Dayana"
+        })
+    }
+
+    static navigationOptions = ({ navigation }) => {
+        return {
+            title: navigation.getParam("nombre")
+        }
+    }
     render() {
         return (
             <View style={style.continer}>
                 <Text>Profile</Text>
                 <Button title="Ir al Home" onPress={this._onPress} />
+                <Button title="Cambia NOmbre" onPress={this._setparam} />
             </View>
         )
     }

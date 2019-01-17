@@ -3,7 +3,9 @@ import { View, Text, StyleSheet, Button } from "react-native";
 
 class About extends Component {
     _onPress = () => {
-        this.props.navigation.navigate("Profile")
+        this.props.navigation.navigate("Profile", {
+            nombre: "Freddy Castillo"
+        })
     }
     render() {
         return (

@@ -8,7 +8,7 @@ class Login extends Component {
     render() {
         return (
             <View style={style.continer}>
-                <Text>Login</Text>
+                <Text>Login </Text>
                 <Button title="Ir al ABout" onPress={this._onPress} />
             </View>
         )
